@@ -50,7 +50,7 @@ const Header = () => {
   return (
     <motion.header
       className={`fixed inset-x-0 top-0 z-50 h-[72px] flex items-center transition-[background,border-color,backdrop-filter,box-shadow] duration-300 ease-soft border-b ${
-        scrolled
+        scrolled || open
           ? "glass border-(--color-border-soft) shadow-soft-sm"
           : "border-transparent"
       }`}
@@ -134,7 +134,7 @@ const Header = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="absolute top-[72px] inset-x-0 px-5 pt-4 pb-6 glass border-b border-(--color-border-soft) shadow-soft-md"
+            className="absolute top-[72px] inset-x-0 px-5 pt-4 pb-6 bg-(--color-surface) border-b border-(--color-border-soft) shadow-soft-lg rounded-b-3xl"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}

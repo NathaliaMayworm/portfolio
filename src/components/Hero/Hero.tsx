@@ -80,7 +80,7 @@ const Hero = () => {
           animate="visible"
           variants={fadeUp}
         >
-          {profile.shortBio}
+          Foco em arquitetura frontend, Design Systems e produtos escaláveis.
         </motion.p>
 
         <motion.div

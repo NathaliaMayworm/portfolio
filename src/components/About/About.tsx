@@ -76,15 +76,6 @@ const About = () => (
           desenvolvimento de aplicações escaláveis, performáticas e orientadas à experiência do
           usuário.
         </p>
-        <p className="text-[1.05rem] leading-[1.75] text-(--color-ink-soft)">
-          <strong className="font-semibold text-(--color-ink)">Principais competências:</strong>{' '}
-          React, Next.js, TypeScript, Redux e Zustand; arquitetura frontend, Design Systems,
-          componentização e engenharia de interfaces escaláveis; integração de serviços e consumo
-          de APIs REST e GraphQL (Fetch API e Axios); Node.js e NestJS em arquitetura de
-          microserviços; bancos de dados SQL e NoSQL (PostgreSQL e MongoDB); performance,
-          escalabilidade e boas práticas de engenharia de software; IA aplicada ao desenvolvimento
-          com Claude, Codex e Cursor.
-        </p>
       </motion.div>
 
       <div className="grid sm:grid-cols-2 gap-5">

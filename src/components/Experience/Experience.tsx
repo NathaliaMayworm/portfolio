@@ -14,8 +14,8 @@ const Experience = () => (
           <span className="text-gradient-brand">front-end com impacto</span>.
         </h2>
         <p className="text-[1.05rem] text-(--color-ink-muted)">
-          Mais de 5 anos atuando em produtos reais — da concepção do componente até a entrega
-          completa da feature, em colaboração próxima com design, produto e back-end.
+          +5 anos atuando em produtos reais — da concepção do componente até a entrega completa
+          da feature, em colaboração próxima com design, produto e back-end.
         </p>
       </header>
 

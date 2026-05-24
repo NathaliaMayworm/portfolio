@@ -116,17 +116,17 @@ export const generateResume = () => {
   // ---------- RESUMO ----------
   sectionTitle('Resumo Profissional');
   writeWrapped(
-    'Software Engineer com mais de 5 anos de experiência, especializada em front-end com atuação fullstack, desenvolvendo aplicações escaláveis, performáticas e de alto impacto. Forte domínio de React, TypeScript e Next.js, com foco em arquitetura frontend, componentização e construção de interfaces modernas e eficientes.',
+    'Software Engineer com +5 anos de experiência, com foco em front-end, atuando no desenvolvimento de aplicações escaláveis, performáticas e orientadas à experiência do usuário. Forte domínio de React, Next.js e TypeScript, com foco em arquitetura frontend, componentização e gerenciamento de estado com Redux e Zustand.',
     { size: 10 },
   );
   y += 1.5;
   writeWrapped(
-    'Experiência na construção e integração de APIs com GraphQL e REST, atuando também em back-end com Node.js e NestJS em arquiteturas de microserviços, com foco em escalabilidade e manutenção de sistemas distribuídos. Atuação com bancos de dados relacionais e não relacionais (PostgreSQL e MongoDB) em soluções end-to-end.',
+    'Criação de Design Systems e bibliotecas de componentes reutilizáveis com Tailwind CSS, Styled Components e Storybook. Integração e consumo de APIs REST e GraphQL (Fetch API e Axios), além do desenvolvimento backend com Node.js e NestJS em arquitetura de microserviços, com foco em escalabilidade e sistemas distribuídos.',
     { size: 10 },
   );
   y += 1.5;
   writeWrapped(
-    'Forte atuação em performance, qualidade de código e boas práticas, sempre buscando otimizar aplicações e melhorar a experiência do usuário. Uso de IA aplicada ao desenvolvimento (Claude, Codex e Cursor) para aumentar produtividade, acelerar entregas e apoiar decisões técnicas.',
+    'Experiência com bancos de dados SQL e NoSQL (PostgreSQL e MongoDB), contribuindo para soluções end-to-end. Forte atuação em performance, qualidade de código e boas práticas de engenharia de software, e uso de IA aplicada ao desenvolvimento (Claude, Codex e Cursor) para aumentar produtividade, acelerar entregas e apoiar decisões técnicas.',
     { size: 10 },
   );
 

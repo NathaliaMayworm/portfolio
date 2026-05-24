@@ -21,7 +21,7 @@ export const skillCategories: SkillCategory[] = [
     title: 'Front-end',
     description: 'A base do meu trabalho — interfaces escaláveis e performáticas.',
     icon: Code2,
-    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Redux', 'Zustand'],
+    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Redux', 'Zustand', 'react-i18next'],
   },
   {
     title: 'Styling',

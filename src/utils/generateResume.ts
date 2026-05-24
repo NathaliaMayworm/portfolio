@@ -116,7 +116,7 @@ export const generateResume = () => {
   // ---------- RESUMO ----------
   sectionTitle('Resumo Profissional');
   writeWrapped(
-    'Software Engineer com +5 anos de experiência, com foco em front-end, atuando no desenvolvimento de aplicações escaláveis, performáticas e orientadas à experiência do usuário. Forte domínio de React, Next.js e TypeScript, com foco em arquitetura frontend, componentização e gerenciamento de estado com Redux e Zustand.',
+    'Software Engineer com +5 anos de experiência, com foco em front-end, atuando no desenvolvimento de aplicações escaláveis, performáticas e orientadas à experiência do usuário. Forte domínio de React, Next.js e TypeScript, com foco em arquitetura frontend, componentização, gerenciamento de estado (Redux, Zustand) e internacionalização (react-i18next).',
     { size: 10 },
   );
   y += 1.5;

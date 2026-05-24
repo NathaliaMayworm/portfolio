@@ -39,6 +39,7 @@ export const experiences: Experience[] = [
       'MongoDB',
       'PostgreSQL',
       'Tailwind CSS',
+      'react-i18next',
       'Figma',
       'Chrome Extension',
     ],

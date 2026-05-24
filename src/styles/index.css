@@ -170,14 +170,14 @@
 }
 
 @utility section-y {
-  padding-block: 80px;
+  padding-block: 48px;
 
   @media (max-width: 1024px) {
-    padding-block: 60px;
+    padding-block: 32px;
   }
 
   @media (max-width: 768px) {
-    padding-block: 40px;
+    padding-block: 24px;
   }
 }
 

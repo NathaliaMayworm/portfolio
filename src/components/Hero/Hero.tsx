@@ -38,7 +38,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="container-page relative min-h-screen md:pt-[96px] md:pb-24 pt-10 pb-10 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center"
+      className="container-page relative md:pt-[112px] md:pb-16 pt-24 pb-10 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center"
     >
       <div className="flex flex-col gap-5">
         <motion.span

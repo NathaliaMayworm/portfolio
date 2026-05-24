@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { skillCategories } from '../../data/skills';
+import { motion } from "framer-motion";
+import { skillCategories } from "../../data/skills";
 
 const Skills = () => (
   <section id="skills" className="section-y relative">
@@ -9,12 +9,15 @@ const Skills = () => (
           Skills
         </span>
         <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold">
-          Stack que uso para <span className="text-gradient-brand">construir produtos sólidos</span>
+          Ferramentas e tecnologias para{" "}
+          <span className="text-gradient-brand">
+            construir produtos sólidos
+          </span>
           .
         </h2>
         <p className="text-[1.05rem] text-(--color-ink-muted)">
-          Da arquitetura visual à integração com o back-end — uma stack moderna, escalável e
-          pensada para entregar com qualidade e velocidade.
+          Da arquitetura visual à integração com o back-end — uma stack moderna,
+          escalável e pensada para entregar com qualidade e velocidade.
         </p>
       </header>
 
@@ -26,14 +29,20 @@ const Skills = () => (
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.05,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             <div className="relative flex gap-3.5">
               <span className="shrink-0 inline-grid place-items-center w-11 h-11 rounded-xl bg-(--color-surface) border border-(--color-border-soft) text-(--color-brand-deep) shadow-soft-sm transition-[transform,color,background,border-color] duration-300 ease-soft group-hover:rotate-[-6deg] group-hover:scale-105 group-hover:bg-gradient-brand group-hover:text-white group-hover:border-transparent">
                 <category.icon size={20} />
               </span>
               <div>
-                <h3 className="text-[1.05rem] font-semibold">{category.title}</h3>
+                <h3 className="text-[1.05rem] font-semibold">
+                  {category.title}
+                </h3>
                 <p className="text-[0.9rem] mt-1 text-(--color-ink-muted) leading-[1.55]">
                   {category.description}
                 </p>

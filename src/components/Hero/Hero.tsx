@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Download, Loader2, Sparkles } from 'lucide-react';
-import { socials } from '../../data/socials';
-import { profile } from '../../data/profile';
-import { LinkedinIcon } from '../icons';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Download, Loader2, Sparkles } from "lucide-react";
+import { socials } from "../../data/socials";
+import { profile } from "../../data/profile";
+import { LinkedinIcon } from "../icons";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -19,7 +19,7 @@ const fadeUp = {
 };
 
 const btnBase =
-  'inline-flex items-center gap-2 px-[22px] py-3.5 rounded-full font-semibold text-[0.95rem] transition-[transform,box-shadow,background,color,border-color,filter] duration-200 ease-soft hover:not-disabled:-translate-y-0.5 disabled:cursor-progress disabled:opacity-85 focus-ring';
+  "inline-flex items-center gap-2 px-[22px] py-3.5 rounded-full font-semibold text-[0.95rem] transition-[transform,box-shadow,background,color,border-color,filter] duration-200 ease-soft hover:not-disabled:-translate-y-0.5 disabled:cursor-progress disabled:opacity-85 focus-ring";
 
 const Hero = () => {
   const [downloading, setDownloading] = useState(false);
@@ -28,7 +28,7 @@ const Hero = () => {
     if (downloading) return;
     setDownloading(true);
     try {
-      const { generateResume } = await import('../../utils/generateResume');
+      const { generateResume } = await import("../../utils/generateResume");
       generateResume();
     } finally {
       setDownloading(false);
@@ -38,7 +38,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="container-page relative min-h-screen pt-[96px] pb-24 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center"
+      className="container-page relative min-h-screen md:pt-[96px] md:pb-24 pt-10 pb-10 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center"
     >
       <div className="flex flex-col gap-5">
         <motion.span
@@ -59,7 +59,8 @@ const Hero = () => {
           animate="visible"
           variants={fadeUp}
         >
-          Oi, eu sou <span className="text-gradient-brand">{profile.fullName}</span>
+          Oi, eu sou{" "}
+          <span className="text-gradient-brand">{profile.fullName}</span>
         </motion.h1>
 
         <motion.p
@@ -79,8 +80,8 @@ const Hero = () => {
           animate="visible"
           variants={fadeUp}
         >
-          {profile.shortBio} Atuação em microserviços, Design Systems e sistemas escaláveis de alta
-          performance.
+          {profile.shortBio} Atuação em microserviços, Design Systems e sistemas
+          escaláveis de alta performance.
         </motion.p>
 
         <motion.div
@@ -108,7 +109,7 @@ const Hero = () => {
             ) : (
               <Download size={18} />
             )}
-            {downloading ? 'Gerando…' : 'Baixar currículo'}
+            {downloading ? "Gerando…" : "Baixar currículo"}
           </button>
           <a
             href={socials.linkedin}
@@ -129,20 +130,30 @@ const Hero = () => {
           variants={fadeUp}
         >
           <div className="flex flex-col gap-0.5">
-            <strong className="font-display text-xl font-bold text-(--color-ink)">+5</strong>
-            <span className="text-[0.85rem] text-(--color-ink-muted)">anos de experiência</span>
+            <strong className="font-display text-xl font-bold text-(--color-ink)">
+              +5
+            </strong>
+            <span className="text-[0.85rem] text-(--color-ink-muted)">
+              anos de experiência
+            </span>
           </div>
           <div className="hidden xs:block w-px h-8 bg-(--color-border-soft)" />
           <div className="flex flex-col gap-0.5">
             <strong className="font-display text-xl font-bold text-(--color-ink)">
               React · Next · TS
             </strong>
-            <span className="text-[0.85rem] text-(--color-ink-muted)">stack principal</span>
+            <span className="text-[0.85rem] text-(--color-ink-muted)">
+              stack principal
+            </span>
           </div>
           <div className="hidden xs:block w-px h-8 bg-(--color-border-soft)" />
           <div className="flex flex-col gap-0.5">
-            <strong className="font-display text-xl font-bold text-(--color-ink)">Fullstack</strong>
-            <span className="text-[0.85rem] text-(--color-ink-muted)">frontend-focused</span>
+            <strong className="font-display text-xl font-bold text-(--color-ink)">
+              Fullstack
+            </strong>
+            <span className="text-[0.85rem] text-(--color-ink-muted)">
+              frontend-focused
+            </span>
           </div>
         </motion.div>
       </div>
@@ -165,29 +176,35 @@ const Hero = () => {
           </div>
           <pre className="my-4 p-0 font-mono text-[0.88rem] leading-[1.7] text-(--color-ink) whitespace-pre-wrap">
             <code>
-              <span className="text-[#b347d9]">const</span>{' '}
-              <span className="text-[#2563eb]">nathalia</span> = {'{'}
-              {'\n'}  role: <span className="text-[#0d9488]">'Software Engineer'</span>,
-              {'\n'}  focus:{' '}
-              <span className="text-[#0d9488]">'Frontend-Focused Fullstack'</span>,
-              {'\n'}  stack: [<span className="text-[#0d9488]">'React'</span>,{' '}
-              <span className="text-[#0d9488]">'Next.js'</span>,{' '}
-              <span className="text-[#0d9488]">'TypeScript'</span>,{' '}
-              <span className="text-[#0d9488]">'Node.js'</span>,{' '}
+              <span className="text-[#b347d9]">const</span>{" "}
+              <span className="text-[#2563eb]">nathalia</span> = {"{"}
+              {"\n"} role:{" "}
+              <span className="text-[#0d9488]">'Software Engineer'</span>,{"\n"}{" "}
+              focus:{" "}
+              <span className="text-[#0d9488]">
+                'Frontend-Focused Fullstack'
+              </span>
+              ,{"\n"} stack: [<span className="text-[#0d9488]">'React'</span>,{" "}
+              <span className="text-[#0d9488]">'Next.js'</span>,{" "}
+              <span className="text-[#0d9488]">'TypeScript'</span>,{" "}
+              <span className="text-[#0d9488]">'Node.js'</span>,{" "}
               <span className="text-[#0d9488]">'NestJS'</span>],
-              {'\n'}  architecture: [
-              <span className="text-[#0d9488]">'Design Systems'</span>,{' '}
+              {"\n"} architecture: [
+              <span className="text-[#0d9488]">'Design Systems'</span>,{" "}
               <span className="text-[#0d9488]">'Microservices'</span>],
-              {'\n'}  apiIntegration: [<span className="text-[#0d9488]">'REST'</span>,{' '}
+              {"\n"} apiIntegration: [
+              <span className="text-[#0d9488]">'REST'</span>,{" "}
               <span className="text-[#0d9488]">'GraphQL'</span>],
-              {'\n'}  stateManagement: [<span className="text-[#0d9488]">'Redux'</span>,{' '}
+              {"\n"} stateManagement: [
+              <span className="text-[#0d9488]">'Redux'</span>,{" "}
               <span className="text-[#0d9488]">'Zustand'</span>],
-              {'\n'}  databases: [<span className="text-[#0d9488]">'PostgreSQL'</span>,{' '}
+              {"\n"} databases: [
+              <span className="text-[#0d9488]">'PostgreSQL'</span>,{" "}
               <span className="text-[#0d9488]">'MongoDB'</span>],
-              {'\n'}  performance: <span className="text-[#d97706]">true</span>,
-              {'\n'}  scalability: <span className="text-[#d97706]">true</span>,
-              {'\n'}
-              {'}'};
+              {"\n"} performance: <span className="text-[#d97706]">true</span>,
+              {"\n"} scalability: <span className="text-[#d97706]">true</span>,
+              {"\n"}
+              {"}"};
             </code>
           </pre>
           <div className="flex flex-wrap gap-2 pt-3.5 border-t border-(--color-border-soft)">

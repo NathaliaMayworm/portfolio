@@ -21,7 +21,8 @@
   --color-brand-accent: #a78bfa;
 
   /* Fonts */
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: "Sora", "Inter", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
@@ -29,9 +30,12 @@
   --radius-pill: 999px;
 
   /* Shadows */
-  --shadow-soft-sm: 0 1px 2px rgb(15 17 38 / 0.04), 0 2px 6px rgb(15 17 38 / 0.04);
-  --shadow-soft-md: 0 4px 16px rgb(15 17 38 / 0.06), 0 8px 24px rgb(15 17 38 / 0.05);
-  --shadow-soft-lg: 0 10px 30px rgb(15 17 38 / 0.08), 0 20px 60px rgb(76 70 196 / 0.12);
+  --shadow-soft-sm:
+    0 1px 2px rgb(15 17 38 / 0.04), 0 2px 6px rgb(15 17 38 / 0.04);
+  --shadow-soft-md:
+    0 4px 16px rgb(15 17 38 / 0.06), 0 8px 24px rgb(15 17 38 / 0.05);
+  --shadow-soft-lg:
+    0 10px 30px rgb(15 17 38 / 0.08), 0 20px 60px rgb(76 70 196 / 0.12);
   --shadow-glow: 0 20px 60px rgb(108 92 231 / 0.25);
 
   /* Easing */
@@ -132,14 +136,14 @@
 }
 
 @utility section-y {
-  padding-block: 120px;
+  padding-block: 60px;
 
   @media (max-width: 1024px) {
-    padding-block: 96px;
+    padding-block: 40px;
   }
 
   @media (max-width: 768px) {
-    padding-block: 72px;
+    padding-block: 30px;
   }
 }
 
@@ -156,7 +160,11 @@
 }
 
 @utility bg-gradient-brand-soft {
-  background: linear-gradient(135deg, rgb(124 92 255 / 0.18) 0%, rgb(75 139 245 / 0.18) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(124 92 255 / 0.18) 0%,
+    rgb(75 139 245 / 0.18) 100%
+  );
 }
 
 @utility glass {

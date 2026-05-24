@@ -51,9 +51,11 @@ const Header = () => {
     <>
     <motion.header
       className={`fixed inset-x-0 top-0 z-50 h-[72px] flex items-center transition-[background,border-color,backdrop-filter,box-shadow] duration-300 ease-soft border-b ${
-        scrolled || open
-          ? "glass border-(--color-border-soft) shadow-soft-sm"
-          : "border-transparent"
+        open
+          ? "bg-(--color-surface) border-transparent"
+          : scrolled
+            ? "glass border-(--color-border-soft) shadow-soft-sm"
+            : "border-transparent"
       }`}
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}

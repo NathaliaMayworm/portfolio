@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-(--color-border-soft) py-8 bg-white/40 dark:bg-white/[0.03] backdrop-blur-md">
       <div className="container-page flex items-center justify-between gap-6 flex-wrap">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 mx-auto md:mx-0">
           <span className="inline-grid place-items-center w-9 h-9 rounded-[10px] bg-gradient-brand text-white text-xs font-extrabold tracking-wider shadow-soft-sm">
             NM
           </span>
@@ -29,7 +29,7 @@ const Footer = () => {
           © {year} Nathália Mayworm Kapps. Construído com React, Vite, TypeScript e Tailwind CSS.
         </p>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 mx-auto md:mx-0">
           <a
             href={socials.linkedin}
             target="_blank"

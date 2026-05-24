@@ -80,8 +80,7 @@ const Hero = () => {
           animate="visible"
           variants={fadeUp}
         >
-          {profile.shortBio} Atuação em microserviços, Design Systems e sistemas
-          escaláveis de alta performance.
+          {profile.shortBio}
         </motion.p>
 
         <motion.div
@@ -140,7 +139,7 @@ const Hero = () => {
           <div className="hidden xs:block w-px h-8 bg-(--color-border-soft)" />
           <div className="flex flex-col gap-0.5">
             <strong className="font-display text-xl font-bold text-(--color-ink)">
-              React · Next · TS
+              React · Next · Node · TS
             </strong>
             <span className="text-[0.85rem] text-(--color-ink-muted)">
               stack principal

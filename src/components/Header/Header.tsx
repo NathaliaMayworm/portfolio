@@ -33,6 +33,15 @@ const Header = () => {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
     <motion.header
       className={`fixed inset-x-0 top-0 z-50 h-[72px] flex items-center transition-[background,border-color,backdrop-filter,box-shadow] duration-300 ease-soft border-b ${

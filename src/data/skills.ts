@@ -21,13 +21,13 @@ export const skillCategories: SkillCategory[] = [
     title: 'Front-end',
     description: 'A base do meu trabalho — interfaces escaláveis e performáticas.',
     icon: Code2,
-    items: ['React', 'TypeScript', 'JavaScript', 'Next.js'],
+    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Redux', 'Zustand'],
   },
   {
     title: 'Styling',
     description: 'Estilos robustos, design tokens e componentização visual.',
     icon: Palette,
-    items: ['Tailwind CSS', 'SCSS', 'Styled Components', 'Storybook'],
+    items: ['Tailwind CSS', 'Styled Components', 'Storybook'],
   },
   {
     title: 'Back-end',

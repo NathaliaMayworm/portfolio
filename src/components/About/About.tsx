@@ -55,11 +55,12 @@ const About = () => (
             aria-hidden
           />
           <img
-            src="/perfil-photo.jpeg"
+            src="/perfil-avatar.webp"
             alt="Foto de Nathália Mayworm"
             width={140}
             height={140}
             loading="lazy"
+            decoding="async"
             className="relative w-[140px] h-[140px] rounded-full object-cover border-4 border-white shadow-soft-lg ring-1 ring-(--color-border-soft)"
           />
         </div>
@@ -68,25 +69,21 @@ const About = () => (
         </span>
         <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold">
           Software Engineer com foco em{' '}
-          <span className="text-gradient-brand">front-end e atuação fullstack</span>.
+          <span className="text-gradient-brand">front-end e experiência do usuário</span>.
         </h2>
         <p className="text-[1.05rem] leading-[1.75] text-(--color-ink-soft)">
-          Software Engineer com mais de 5 anos de experiência, especializada em front-end com
-          atuação fullstack — desenvolvendo aplicações escaláveis, performáticas e orientadas à
-          experiência do usuário. Forte domínio de React, Next.js e TypeScript, com foco em
-          arquitetura frontend, componentização e gerenciamento de estado com Redux e Zustand.
+          Software Engineer com +5 anos de experiência, com foco em front-end, atuando no
+          desenvolvimento de aplicações escaláveis, performáticas e orientadas à experiência do
+          usuário.
         </p>
         <p className="text-[1.05rem] leading-[1.75] text-(--color-ink-soft)">
-          Crio Design Systems e bibliotecas de componentes reutilizáveis com Tailwind CSS e Styled
-          Components — garantindo consistência visual, escalabilidade e produtividade em times de
-          desenvolvimento. Atuo também na integração e consumo de APIs REST e GraphQL (Fetch API e
-          Axios), e no desenvolvimento backend com Node.js e NestJS em arquitetura de microserviços.
-        </p>
-        <p className="text-[1.05rem] leading-[1.75] text-(--color-ink-soft)">
-          Tenho experiência com bancos de dados SQL e NoSQL (PostgreSQL e MongoDB), contribuindo
-          para soluções completas end-to-end. Forte foco em performance, qualidade de código e boas
-          práticas de engenharia de software, e uso IA aplicada ao desenvolvimento (Claude, Codex e
-          Cursor) para aumentar produtividade, acelerar entregas e apoiar decisões técnicas.
+          <strong className="font-semibold text-(--color-ink)">Principais competências:</strong>{' '}
+          React, Next.js, TypeScript, Redux e Zustand; arquitetura frontend, Design Systems,
+          componentização e engenharia de interfaces escaláveis; integração de serviços e consumo
+          de APIs REST e GraphQL (Fetch API e Axios); Node.js e NestJS em arquitetura de
+          microserviços; bancos de dados SQL e NoSQL (PostgreSQL e MongoDB); performance,
+          escalabilidade e boas práticas de engenharia de software; IA aplicada ao desenvolvimento
+          com Claude, Codex e Cursor.
         </p>
       </motion.div>
 

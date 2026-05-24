@@ -14,7 +14,7 @@ const channels = [
   {
     icon: GithubIcon,
     label: 'GitHub',
-    text: 'github.com/nathaliamayworm',
+    text: 'github.com/NathaliaMayworm',
     href: socials.github,
     external: true,
   },

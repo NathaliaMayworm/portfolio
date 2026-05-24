@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { navItems } from "../../data/navigation";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
+import { useTheme } from "../../hooks/useTheme";
 
 const sectionIds = navItems.map((item) => item.href.replace("#", ""));
 
@@ -10,10 +11,14 @@ const navLinkBase =
   "inline-flex items-center px-3.5 py-2 rounded-full text-[0.92rem] font-medium text-(--color-ink-soft) transition-colors duration-200 ease-soft hover:text-(--color-ink) hover:bg-[rgb(108_92_231_/_0.08)] focus-ring";
 const navLinkActive = "text-(--color-brand-deep) bg-[rgb(108_92_231_/_0.1)]";
 
+const themeToggleClass =
+  "inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[rgb(108_92_231_/_0.08)] text-(--color-brand-deep) transition-colors duration-200 ease-soft hover:bg-[rgb(108_92_231_/_0.16)] focus-ring";
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const activeId = useScrollSpy(sectionIds);
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 12);
@@ -88,6 +93,15 @@ const Header = () => {
           </ul>
         </nav>
 
+        <button
+          type="button"
+          onClick={toggle}
+          aria-label={theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"}
+          className={`hidden lg:inline-flex ${themeToggleClass}`}
+        >
+          {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+        </button>
+
         <a
           href="#contato"
           className="hidden lg:inline-flex items-center px-[18px] py-2.5 rounded-full font-semibold text-[0.92rem] text-white bg-gradient-brand shadow-soft-sm transition-[transform,box-shadow,filter] duration-200 ease-soft hover:-translate-y-px hover:shadow-glow hover:brightness-105 focus-ring"
@@ -95,15 +109,26 @@ const Header = () => {
           Vamos conversar
         </a>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-          className="lg:hidden ml-auto inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[rgb(108_92_231_/_0.08)] text-(--color-brand-deep) transition-colors duration-200 ease-soft hover:bg-[rgb(108_92_231_/_0.16)]"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="lg:hidden ml-auto flex items-center gap-2">
+          <button
+            type="button"
+            onClick={toggle}
+            aria-label={theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"}
+            className={themeToggleClass}
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            className={themeToggleClass}
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>

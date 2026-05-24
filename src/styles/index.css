@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Custom breakpoint matching original SCSS $bp-sm = 480px */
   --breakpoint-xs: 30rem;
@@ -42,7 +44,39 @@
   --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Dark mode — applied when <html> has .dark class */
+.dark {
+  --color-bg: #0a0b1e;
+  --color-bg-soft: #13152a;
+  --color-surface: #1a1c30;
+  --color-border-soft: rgb(255 255 255 / 0.08);
+
+  --color-ink: #f1f3fa;
+  --color-ink-soft: #b8bcd0;
+  --color-ink-muted: #8a8fa8;
+
+  /* Brighten deep brand for readable accents on dark bg */
+  --color-brand-deep: #a78bfa;
+
+  /* Shadows softer (less visible on dark) but with brand glow */
+  --shadow-soft-sm:
+    0 1px 2px rgb(0 0 0 / 0.3), 0 2px 6px rgb(0 0 0 / 0.2);
+  --shadow-soft-md:
+    0 4px 16px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.2);
+  --shadow-soft-lg:
+    0 10px 30px rgb(0 0 0 / 0.4), 0 20px 60px rgb(76 70 196 / 0.25);
+  --shadow-glow: 0 20px 60px rgb(124 92 255 / 0.35);
+}
+
 @layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
   *,
   *::before,
   *::after {
@@ -172,6 +206,11 @@
   backdrop-filter: blur(18px) saturate(140%);
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   border: 1px solid rgb(255 255 255 / 0.6);
+}
+
+.dark .glass {
+  background: rgb(15 17 38 / 0.6);
+  border-color: rgb(255 255 255 / 0.08);
 }
 
 @utility focus-ring {

@@ -9,7 +9,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-(--color-border-soft) py-8 bg-white/40 backdrop-blur-md">
+    <footer className="border-t border-(--color-border-soft) py-8 bg-white/40 dark:bg-white/[0.03] backdrop-blur-md">
       <div className="container-page flex items-center justify-between gap-6 flex-wrap">
         <div className="flex items-center gap-3">
           <span className="inline-grid place-items-center w-9 h-9 rounded-[10px] bg-gradient-brand text-white text-xs font-extrabold tracking-wider shadow-soft-sm">

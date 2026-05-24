@@ -42,7 +42,7 @@ const Hero = () => {
     >
       <div className="flex flex-col gap-5">
         <motion.span
-          className="self-start inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 border border-(--color-border-soft) backdrop-blur-md text-[0.82rem] font-medium text-(--color-ink-soft) shadow-soft-sm [&>svg]:text-(--color-brand)"
+          className="self-start inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 dark:bg-white/[0.04] border border-(--color-border-soft) backdrop-blur-md text-[0.82rem] font-medium text-(--color-ink-soft) shadow-soft-sm [&>svg]:text-(--color-brand)"
           custom={0}
           initial="hidden"
           animate="visible"
@@ -164,7 +164,7 @@ const Hero = () => {
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         aria-hidden
       >
-        <div className="relative z-[2] w-full max-w-[480px] rounded-[32px] p-[22px] bg-white/75 border border-white/70 shadow-[var(--shadow-soft-lg),0_0_0_1px_rgb(108_92_231_/_0.08)] backdrop-blur-[18px]">
+        <div className="relative z-[2] w-full max-w-[480px] rounded-[32px] p-[22px] bg-white/75 border border-white/70 dark:bg-[rgb(20_22_45_/_0.7)] dark:border-white/10 shadow-[var(--shadow-soft-lg),0_0_0_1px_rgb(108_92_231_/_0.08)] backdrop-blur-[18px]">
           <div className="flex items-center gap-2 pb-3.5 border-b border-(--color-border-soft)">
             <span className="inline-block w-2.5 h-2.5 rounded-full bg-[#ff6b6b]" />
             <span className="inline-block w-2.5 h-2.5 rounded-full bg-[#ffd166]" />

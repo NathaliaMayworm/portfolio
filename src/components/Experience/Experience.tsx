@@ -74,7 +74,7 @@ const Experience = () => (
                 {exp.stack.map((tech) => (
                   <li
                     key={tech}
-                    className="px-2.5 py-1 text-[0.78rem] font-medium rounded-full bg-[rgb(15_17_38_/_0.04)] text-(--color-ink-soft) transition-colors duration-200 ease-soft group-hover:bg-[rgb(108_92_231_/_0.1)] group-hover:text-(--color-brand-deep)"
+                    className="px-2.5 py-1 text-[0.78rem] font-medium rounded-full bg-[rgb(15_17_38_/_0.04)] dark:bg-white/[0.06] text-(--color-ink-soft) transition-colors duration-200 ease-soft group-hover:bg-[rgb(108_92_231_/_0.1)] group-hover:text-(--color-brand-deep) dark:group-hover:bg-[rgb(167_139_250_/_0.15)]"
                   >
                     {tech}
                   </li>

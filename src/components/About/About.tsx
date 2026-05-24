@@ -61,7 +61,7 @@ const About = () => (
             height={140}
             loading="lazy"
             decoding="async"
-            className="relative w-[140px] h-[140px] rounded-full object-cover border-4 border-white shadow-soft-lg ring-1 ring-(--color-border-soft)"
+            className="relative w-[140px] h-[140px] rounded-full object-cover border-4 border-white dark:border-(--color-surface) shadow-soft-lg ring-1 ring-(--color-border-soft)"
           />
         </div>
         <span className="self-start inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgb(108_92_231_/_0.08)] text-(--color-brand-deep) text-[0.78rem] font-semibold tracking-[0.06em] uppercase">

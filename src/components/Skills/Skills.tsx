@@ -44,7 +44,7 @@ const Skills = () => (
               {category.items.map((item) => (
                 <li
                   key={item}
-                  className="px-3 py-1.5 text-[0.82rem] font-medium rounded-full bg-[rgb(108_92_231_/_0.08)] text-(--color-brand-deep) transition-colors duration-200 ease-soft group-hover:bg-white/85"
+                  className="px-3 py-1.5 text-[0.82rem] font-medium rounded-full bg-[rgb(108_92_231_/_0.08)] text-(--color-brand-deep) transition-colors duration-200 ease-soft group-hover:bg-white/85 dark:group-hover:bg-white/10"
                 >
                   {item}
                 </li>

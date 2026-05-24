@@ -53,9 +53,9 @@ const Contact = () => (
 
       <a
         href={`mailto:${socials.email}`}
-        className="inline-flex items-center gap-2.5 mt-8 px-[26px] py-4 rounded-full bg-white text-(--color-ink) font-semibold text-base shadow-[0_18px_48px_rgb(0_0_0_/_0.25)] transition-[transform,box-shadow] duration-200 ease-soft hover:-translate-y-0.5 hover:shadow-[0_24px_60px_rgb(124_92_255_/_0.45)] focus-ring"
+        className="inline-flex items-center gap-2.5 mt-8 px-[26px] py-4 rounded-full bg-white text-[#0f1126] font-semibold text-base shadow-[0_18px_48px_rgb(0_0_0_/_0.25)] transition-[transform,box-shadow] duration-200 ease-soft hover:-translate-y-0.5 hover:shadow-[0_24px_60px_rgb(124_92_255_/_0.45)] focus-ring"
       >
-        <Mail size={18} />
+        <Mail size={18} className="text-(--color-brand-deep)" />
         {socials.email}
       </a>
 

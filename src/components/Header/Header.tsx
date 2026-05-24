@@ -11,8 +11,8 @@ const navLinkBase =
   "inline-flex items-center px-3.5 py-2 rounded-full text-[0.92rem] font-medium text-(--color-ink-soft) transition-colors duration-200 ease-soft hover:text-(--color-ink) hover:bg-[rgb(108_92_231_/_0.08)] focus-ring";
 const navLinkActive = "text-(--color-brand-deep) bg-[rgb(108_92_231_/_0.1)]";
 
-const themeToggleClass =
-  "inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[rgb(108_92_231_/_0.08)] text-(--color-brand-deep) transition-colors duration-200 ease-soft hover:bg-[rgb(108_92_231_/_0.16)] focus-ring";
+const iconButtonClass =
+  "items-center justify-center w-10 h-10 rounded-xl bg-[rgb(108_92_231_/_0.08)] text-(--color-brand-deep) transition-colors duration-200 ease-soft hover:bg-[rgb(108_92_231_/_0.16)] focus-ring";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -97,7 +97,7 @@ const Header = () => {
           type="button"
           onClick={toggle}
           aria-label={theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"}
-          className={`hidden lg:inline-flex ${themeToggleClass}`}
+          className={`hidden lg:inline-flex ${iconButtonClass}`}
         >
           {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
         </button>
@@ -114,7 +114,7 @@ const Header = () => {
             type="button"
             onClick={toggle}
             aria-label={theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"}
-            className={themeToggleClass}
+            className={`inline-flex ${iconButtonClass}`}
           >
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
@@ -124,7 +124,7 @@ const Header = () => {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Fechar menu" : "Abrir menu"}
             aria-expanded={open}
-            className={themeToggleClass}
+            className={`inline-flex ${iconButtonClass}`}
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>

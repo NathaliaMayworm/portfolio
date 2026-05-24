@@ -48,6 +48,7 @@ const Header = () => {
   }, [open]);
 
   return (
+    <>
     <motion.header
       className={`fixed inset-x-0 top-0 z-50 h-[72px] flex items-center transition-[background,border-color,backdrop-filter,box-shadow] duration-300 ease-soft border-b ${
         scrolled || open
@@ -130,55 +131,56 @@ const Header = () => {
           </button>
         </div>
       </div>
+    </motion.header>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            key="backdrop"
-            className="fixed top-[72px] inset-x-0 bottom-0 backdrop-blur-lg bg-black/30 lg:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            onClick={() => setOpen(false)}
-            aria-hidden
-          />
-        )}
-        {open && (
-          <motion.div
-            key="menu"
-            className="absolute top-[72px] inset-x-0 px-5 pt-4 pb-6 bg-(--color-surface) border-b border-(--color-border-soft) shadow-soft-lg rounded-b-3xl"
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2 }}
-          >
-            <ul className="flex flex-col gap-1">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block px-4 py-3.5 rounded-xl text-base font-medium text-(--color-ink) transition-colors duration-200 ease-soft hover:bg-[rgb(108_92_231_/_0.08)]"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-              <li>
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          key="backdrop"
+          className="fixed top-[72px] inset-x-0 bottom-0 z-40 backdrop-blur-lg bg-black/30 lg:hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          onClick={() => setOpen(false)}
+          aria-hidden
+        />
+      )}
+      {open && (
+        <motion.div
+          key="menu"
+          className="fixed top-[72px] inset-x-0 z-50 px-5 pt-4 pb-6 bg-(--color-surface) border-b border-(--color-border-soft) shadow-soft-lg rounded-b-3xl lg:hidden"
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          transition={{ duration: 0.2 }}
+        >
+          <ul className="flex flex-col gap-1">
+            {navItems.map((item) => (
+              <li key={item.href}>
                 <a
-                  href="#contato"
+                  href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block mt-2 px-4 py-3.5 rounded-xl text-base font-semibold text-center text-white bg-gradient-brand"
+                  className="block px-4 py-3.5 rounded-xl text-base font-medium text-(--color-ink) transition-colors duration-200 ease-soft hover:bg-[rgb(108_92_231_/_0.08)]"
                 >
-                  Vamos conversar
+                  {item.label}
                 </a>
               </li>
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+            ))}
+            <li>
+              <a
+                href="#contato"
+                onClick={() => setOpen(false)}
+                className="block mt-2 px-4 py-3.5 rounded-xl text-base font-semibold text-center text-white bg-gradient-brand"
+              >
+                Vamos conversar
+              </a>
+            </li>
+          </ul>
+        </motion.div>
+      )}
+    </AnimatePresence>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 # Nathália Mayworm Kapps — Portfolio
 
-Portfolio pessoal em formato de landing page de página única, construído com **React + Vite + TypeScript** e estilizado com **Tailwind CSS v4**.
+Aplicação desenvolvida para apresentar meu perfil profissional, experiência e competências como Software Engineer focada em front-end. Construída como SPA em **React 18 + Vite + TypeScript + Tailwind CSS v4**, com Design System próprio em CSS-first via `@theme`, dark mode com persistência (`localStorage` + `prefers-color-scheme`), gerador de currículo em PDF ATS-friendly (jsPDF), animações declarativas com Framer Motion, scroll-spy nav e Open Graph + Twitter Cards otimizados.
 
 ## Stack
 

@@ -134,6 +134,19 @@ const Header = () => {
       <AnimatePresence>
         {open && (
           <motion.div
+            key="backdrop"
+            className="fixed top-[72px] inset-x-0 bottom-0 backdrop-blur-lg bg-black/30 lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => setOpen(false)}
+            aria-hidden
+          />
+        )}
+        {open && (
+          <motion.div
+            key="menu"
             className="absolute top-[72px] inset-x-0 px-5 pt-4 pb-6 bg-(--color-surface) border-b border-(--color-border-soft) shadow-soft-lg rounded-b-3xl"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}

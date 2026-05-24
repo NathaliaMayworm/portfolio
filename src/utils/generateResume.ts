@@ -95,12 +95,10 @@ export const generateResume = () => {
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(9.5);
   setColor(COLOR_MUTED);
-  const contactLine = [
-    profile.location,
-    socials.email,
-    linkedinShort,
-    githubShort,
-  ].join('  |  ');
+  doc.text(profile.location, MARGIN_X, y);
+  y += 4.5;
+
+  const contactLine = [socials.email, linkedinShort, githubShort].join('  |  ');
   const contactLines = doc.splitTextToSize(contactLine, CONTENT_WIDTH) as string[];
   for (const line of contactLines) {
     doc.text(line, MARGIN_X, y);
